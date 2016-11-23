@@ -1,5 +1,9 @@
+body {
+  overflow: hidden;;
+}
+
 img {
-  max-height: 630px;
+  max-height: 500px;
 }
 
 #animated {
