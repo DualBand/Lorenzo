@@ -1,0 +1,27 @@
+div {
+  width: 100%;
+}
+
+img {
+  max-height: 650px;
+}
+
+#sx {
+  float: left;
+}
+
+#dx {
+  float: right;
+}
+
+/*#sipario {
+  position: relative;
+  animation-name: ltr;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes ltr {
+    0%   {left:0px; top:0px;}
+    100% {left:500px; top:0px;}
+}*/
