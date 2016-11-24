@@ -19,6 +19,7 @@ function ltr() {
 
 function frameResize() {
   var curtain_height=window.innerHeight
-  document.getElementById('sx').style.height=curtain_height+'px'
-  document.getElementById('dx').style.height=curtain_height+'px'
+  var els=document.getElementsByClassName('resizable')
+    for (var i=0; i<els.length; i++)
+      els[i].style.height=curtain_height+'px'
 }
