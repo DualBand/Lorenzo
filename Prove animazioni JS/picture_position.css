@@ -1,9 +1,9 @@
 body {
-  overflow: hidden;;
+  overflow: hidden;
 }
 
 img {
-  max-height: 500px;
+  /*max-height: 500px;*/
 }
 
 #animated {
