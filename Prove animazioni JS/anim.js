@@ -14,7 +14,7 @@ function ltr() {
     if (position==2000)
       clearInterval(id)
   }
-  var id=setInterval(frame, 5)
+  var id=setInterval(frame, 10)
 }
 
 function frameResize() {
