@@ -1,0 +1,11 @@
+body {                                /*nasconde le barre di scorrimento*/
+  overflow: hidden;
+}
+
+#sx {
+  float: left;
+}
+
+#dx {
+  float: right;
+}
