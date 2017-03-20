@@ -1,5 +1,7 @@
 body {                                /*nasconde le barre di scorrimento*/
   overflow: hidden;
+  background-color: black;
+  font-family: monospace;
 }
 
 #sx {
@@ -8,4 +10,22 @@ body {                                /*nasconde le barre di scorrimento*/
 
 #dx {
   float: right;
+}
+
+#sipario {
+  position: absolute;
+  z-index: -1;
+  }
+
+#mainmenu {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  color: white;
+  display: block;
 }
