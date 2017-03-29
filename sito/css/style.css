@@ -17,15 +17,24 @@ body {                                /*nasconde le barre di scorrimento*/
   z-index: -1;
   }
 
-#mainmenu {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
+#mainmenu {                                 /*NIENTE DI TUTTO CIÒ HA UN SENSO*/
+    width: inherit;;
+    height: inherit;
+    margin: 0 auto
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
 }
 
 a {
   color: white;
+  display: block;
+}
+
+p {
   display: block;
 }
