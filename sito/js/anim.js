@@ -8,3 +8,9 @@ function ltr() {
   }
   var id=setInterval(frame, 10)
 }
+
+function handleButton() {
+  ltr()
+  var button=document.getElementById('home')
+  button.style.display='none'
+}
