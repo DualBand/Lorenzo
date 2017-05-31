@@ -1,7 +1,7 @@
 function ltr() {
   var position=0
   function frame() {
-    position++
+    position+=2.5
     document.getElementById('sipario').style.left=position+'px'
     if (position==2000)
       clearInterval(id)
@@ -11,6 +11,6 @@ function ltr() {
 
 function handleButton() {
   ltr()
-  var button=document.getElementById('home')
+  var button=document.getElementById('enter')
   button.style.display='none'
 }
