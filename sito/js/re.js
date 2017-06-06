@@ -1,11 +1,11 @@
 window.onload=function() {
   frameResize()
-  penguinResize()
+  penguinRefactor()
 }
 
 window.onresize=function() {
   frameResize()
-  penguinResize()
+  penguinRefactor()
 }
 
 function frameResize() {
@@ -13,9 +13,9 @@ function frameResize() {
   var elements=document.getElementsByClassName('resizable')
     for (var i=0; i<elements.length; i++)
       elements[i].style.height=curtain_height+'px'
-  var winwidth=window.innerWidth;
-  var winheight=window.innerHeight;
-  if((winwidth/winheight)>(21/9)) {     //not working yet
+  var winwidth=window.innerWidth
+  var winheight=window.innerHeight
+  if((winwidth/winheight)>(21/9)) {     //fare qualcosa di più intelligente
     alert("Piantala di ridimensionare questa finestra, le cose a schermo intero sono bellissime!");
   }
   else {    //resize dinamically
@@ -26,9 +26,10 @@ function frameResize() {
   }
 }
 
-function penguinResize() {
+function penguinRefactor() {
   var penguin_height=window.innerHeight/2
   var penguin=document.getElementsByClassName('penguin')
+  var footer_position=document.getElementById('foot').getBoundingClientRect() //lavorarci
   for (var i=0; i<penguin.length; i++)
     penguin[i].style.height=penguin_height+'px'
 }

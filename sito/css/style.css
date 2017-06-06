@@ -101,6 +101,18 @@ li a:hover {
   z-index: -2;
 }
 
-polygon {
-  fill: white;
+#biotri {
+  margin-left: -20px;
+  margin-top: 10%;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+#bio {
+  margin-top: -10%;
+  width: 50%;
+  height: 50%;
+  color: #211e1e;
+  font-size: 20;
+  z-index: 0;
 }
