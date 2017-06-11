@@ -2,6 +2,7 @@ body {                                /*nasconde le barre di scorrimento*/
   overflow: hidden;
   background-color: #211e1e;
   font-family: monospace;
+  position: relative;
 }
 
 p {
@@ -87,10 +88,10 @@ li a:hover {
 }
 
 #p2 {
-  /*margin-left: -170px;
-  margin-top: 280px;*/
   margin-left: -12%;
-  margin-top: 21%;
+  /*margin-top: 21%;*/
+  position: absolute;
+  bottom: -2px;
 }
 
 #biocomic {
@@ -102,7 +103,7 @@ li a:hover {
 }
 
 #biotri {
-  margin-left: -20px;
+  margin-left: 120px;
   margin-top: 10%;
   max-height: 150px;
   max-width: 150px;
