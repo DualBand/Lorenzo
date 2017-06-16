@@ -1,8 +1,17 @@
+@font-face {
+    font-family:"Underwood Champion";
+    src: url("../fonts/uwch.ttf") /* TTF file for CSS3 browsers */
+}
+
 body {                                /*nasconde le barre di scorrimento*/
   overflow: hidden;
   background-color: #211e1e;
-  font-family: monospace;
+  font-family:"Underwood Champion";
   position: relative;
+}
+
+button {
+  font-family: "Underwood Champion";
 }
 
 p {
@@ -103,7 +112,7 @@ li a:hover {
 }
 
 #biotri {
-  margin-left: 120px;
+  margin-left: 160px;
   margin-top: 10%;
   max-height: 150px;
   max-width: 150px;
