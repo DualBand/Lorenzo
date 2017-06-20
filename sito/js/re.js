@@ -32,3 +32,16 @@ function penguinRefactor() {
   for (var i=0; i<penguin.length; i++)
     penguin[i].style.height=penguin_height+'px'
 }
+
+function findPos(obj){  //restituisce le coordinate X, Y di un oggetto 
+   var left = 0
+   var top = 0
+   if (obj.offsetParent) {
+      do {
+         left += obj.offsetLeft
+         top += obj.offsetTop
+      } while (obj = obj.offsetParent)
+
+      return {X:left,Y:top}
+   }
+}
