@@ -1,11 +1,13 @@
 window.onload=function() {
   frameResize()
   penguinRefactor()
+  comicRefactor('w')
 }
 
 window.onresize=function() {
   frameResize()
   penguinRefactor()
+  comicRefactor('w')
 }
 
 function frameResize() {
@@ -33,7 +35,16 @@ function penguinRefactor() {
     penguin[i].style.height=penguin_height+'px'
 }
 
-function findPos(obj){  //restituisce le coordinate X, Y di un oggetto 
+function comicRefactor(menu_id) {
+  var comic=document.getElementsByClassName('comic')
+  var coordinates=findPos(document.getElementById(menu_id))
+  for (var i=0; i<comic.length; i++) {
+    comic[i].style.left=coordinates.X+'px'
+    comic[i].style.top=coordinates.Y+document.getElementById(menu_id).height+'px'
+  }
+}
+
+function findPos(obj){  //restituisce le coordinate X, Y di un oggetto
    var left = 0
    var top = 0
    if (obj.offsetParent) {
