@@ -6,7 +6,7 @@
 body {                                /*nasconde le barre di scorrimento*/
   overflow: hidden;
   background-color: #211e1e;
-  font-family:"Underwood Champion";
+  font-family:"Underwood Champion", monospace;;
   position: relative;
 }
 
@@ -131,5 +131,23 @@ li a:hover {
   font-size: 20;
   z-index: 0;
   width: 50%;
-  overflow:hidden;   /*da decidere in base alla lunghezza del testo se deve avere una barra di scorrimento/*
+  overflow: hidden;   /*da decidere in base alla lunghezza del testo se deve avere una barra di scorrimento*/
+}
+
+iframe {
+  height: 80%;
+  width: 70%;
+  position: absolute;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.pb {
+  height: 97%;
+  display: inline;
+}
+
+#pbs {
+  float: left;
+  display: inline;
 }

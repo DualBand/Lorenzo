@@ -2,12 +2,14 @@ window.onload=function() {
   frameResize()
   penguinRefactor()
   comicRefactor('w')
+  iframeRefactor()
 }
 
 window.onresize=function() {
   frameResize()
   penguinRefactor()
   comicRefactor('w')
+  iframeRefactor()
 }
 
 function frameResize() {
@@ -42,6 +44,12 @@ function comicRefactor(menu_id) {
     comic[i].style.left=coordinates.X+'px'
     comic[i].style.top=coordinates.Y+document.getElementById(menu_id).height+'px'
   }
+}
+
+function iframeRefactor() {
+  var dx=document.getElementById('dx')
+  var frame=document.getElementById('frame')
+  frame.style.width=window.innerWidth-2*dx.width+'px'
 }
 
 function findPos(obj){  //restituisce le coordinate X, Y di un oggetto
