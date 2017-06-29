@@ -50,7 +50,13 @@ function iframeRefactor() {
   var dx=document.getElementById('dx')
   var frame=document.getElementById('frame')
   frame.style.width=window.innerWidth-2*dx.width+'px'
+  var div=window.frames['frame'].contentDocument.getElementById('pbs')  //WIP
+  var imgs=window.frames['frame'].contentDocument.getElementsByClassName('pb')
+  var n=imgs.length
+  var img_width= imgs[0].getBoundingClientRect().width
+  div.style.width= (img_width+3)*n+'px'
 }
+
 
 function findPos(obj){  //restituisce le coordinate X, Y di un oggetto
    var left = 0
