@@ -1,7 +1,7 @@
 function ltr() {
   var position=0
   function frame() {
-    position+=2.5
+    position+=3
     document.getElementById('sipario').style.left=position+'px'
     if (position==2000)
       clearInterval(id)
