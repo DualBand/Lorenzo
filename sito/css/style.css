@@ -1,12 +1,12 @@
 @font-face {
     font-family:"Underwood Champion";
-    src: url("../fonts/uwch.ttf") /* TTF file for CSS3 browsers */
+    src: url("../fonts/uwch.ttf");
 }
 
 body {                                /*nasconde le barre di scorrimento*/
   overflow: hidden;
   background-color: #211e1e;
-  font-family:"Underwood Champion", monospace;;
+  font-family:"Underwood Champion", monospace;
   position: relative;
 }
 
@@ -57,7 +57,7 @@ footer {
 #enter {
     font-size: 40px;
     margin: auto;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 45%;
     z-index: 3;
@@ -106,8 +106,8 @@ li a:hover {
 #p2 {
   margin-left: -12%;
   /*margin-top: 21%;*/
-  position: absolute;
-  bottom: -15px;
+  position: fixed;
+  bottom: -5px;
 }
 
 .comic {
@@ -150,7 +150,7 @@ iframe {
 }
 
 .pb {
-  height: 97%;
+  width: 35%;
   display: inline;
 }
 
@@ -181,9 +181,42 @@ iframe {
 	background-color: #555;
 }
 
-.overlay {
-  height: 97%;
+/*OVERLAY EFFECTS*/
+
+.container {
+  position: relative;
+  width: 50%;
 }
-.overlay:hover {
-    background-color: red;
+
+.pb {
+  display: inline;
+  /*width: 100%;*/
+  /*height: auto;*/
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 35%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
