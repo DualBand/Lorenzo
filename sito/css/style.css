@@ -66,7 +66,7 @@ footer {
 .horizontal {
   overflow-x: auto;
   overflow-y: hidden;
-  width: 2000px;   //non deve essere statico: realizzare una funzione in re.js che calcoli la larghezza
+  width: 100%;   //non deve essere statico: realizzare una funzione in re.js che calcoli la larghezza
 }
 
 ul {
@@ -176,12 +176,10 @@ iframe {
 .container {
   display:inline-table;
   position: relative;
-  width: 17%;
 }
 
 .pb {
   display: inline;
-  width: 100%;
 }
 
 .overlay {
@@ -190,8 +188,6 @@ iframe {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: #211e1e;

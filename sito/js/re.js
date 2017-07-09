@@ -1,18 +1,18 @@
 window.onload=function() {
-  frameResize()
+  curtainResize()
   penguinRefactor()
   comicRefactor('w')
   iframeRefactor()
 }
 
 window.onresize=function() {
-  frameResize()
+  curtainResize()
   penguinRefactor()
   comicRefactor('w')
   iframeRefactor()
 }
 
-function frameResize() {
+function curtainResize() {
   var curtain_height=window.innerHeight
   var elements=document.getElementsByClassName('resizable')
     for (var i=0; i<elements.length; i++)
@@ -47,14 +47,10 @@ function comicRefactor(menu_id) {
 }
 
 function iframeRefactor() {
+  /*determina la larghezza dell'iframe (pag. Progetti)*/
   var dx=document.getElementById('dx')
   var frame=document.getElementById('frame')
   frame.style.width=window.innerWidth-2*dx.width+'px'
-  var div=window.frames['frame'].contentDocument.getElementById('pbs')  //WIP
-  var imgs=window.frames['frame'].contentDocument.getElementsByClassName('pb')
-  var n=imgs.length
-  var img_width= imgs[0].getBoundingClientRect().width
-  div.style.width= (img_width+3)*n+'px'
 }
 
 
