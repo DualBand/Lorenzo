@@ -1,15 +1,16 @@
-window.onload=function() {
-  curtainResize()
-  penguinRefactor()
-  comicRefactor('w')
-  iframeRefactor()
-}
+window.onload=function() { dostuff() }
+window.onresize=function() { dostuff() }
 
-window.onresize=function() {
+function dostuff() {
   curtainResize()
-  penguinRefactor()
-  comicRefactor('w')
-  iframeRefactor()
+  var body=document.getElementsByTagName('body')
+  if (body[0].classList.contains('index')) {}
+  else if(body[0].classList.contains('bio')) {
+    penguinRefactor()
+    comicRefactor('w')
+  }
+  else if(body[0].classList.contains('contact')) {}
+  else if(body[0].classList.contains('projects')) iframeRefactor()
 }
 
 function curtainResize() {

@@ -180,9 +180,11 @@ iframe {
 
 .pb {
   display: inline;
+  border-radius: 1%;
 }
 
 .overlay {
+  border-radius: 1%;
   position: absolute;
   top: 0;
   bottom: 0;
