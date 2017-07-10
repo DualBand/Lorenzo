@@ -10,6 +10,11 @@ body {                                /*nasconde le barre di scorrimento*/
   position: relative;
 }
 
+a {
+  color: #ae5046;
+  text-decoration: none;
+}
+
 button {
   font-family: "Underwood Champion";
 }

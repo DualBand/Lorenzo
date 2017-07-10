@@ -9,7 +9,9 @@ function dostuff() {
     penguinRefactor()
     comicRefactor('w')
   }
-  else if(body[0].classList.contains('contact')) {}
+  else if(body[0].classList.contains('contact')) {
+    comicRefactor('c')
+  }
   else if(body[0].classList.contains('projects')) iframeRefactor()
 }
 
