@@ -43,11 +43,14 @@ function penguinRefactor() {
 
 function comicRefactor(menu_id) {
   var comic=document.getElementsByClassName('comic')
-  var coordinates=findPos(document.getElementById(menu_id))
+  var ccoordinates=findPos(document.getElementById(menu_id))
   for (var i=0; i<comic.length; i++) {
-    comic[i].style.left=coordinates.X+'px'
-    comic[i].style.top=coordinates.Y+document.getElementById(menu_id).height+'px'
+    comic[i].style.left=ccoordinates.X+'px'
+    comic[i].style.top=ccoordinates.Y+document.getElementById(menu_id).height+'px'
   }
+  var triangle=document.getElementById('tri')
+  //la x varierà in funzione del fumetto appena spostato
+  //la y varierà in funzione della testa del pinguino
 }
 
 function iframeRefactor() {
