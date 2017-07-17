@@ -6,12 +6,12 @@ function dostuff() {
   var body=document.getElementsByTagName('body')
   if (body[0].classList.contains('index')) {}
   else if(body[0].classList.contains('bio')) {
-    penguinRefactor()
     comicRefactor('w')
+    penguinRefactor()
   }
   else if(body[0].classList.contains('contact')) {
-    penguinRefactor()
     comicRefactor('c')
+    penguinRefactor()
   }
   else if(body[0].classList.contains('projects')) iframeRefactor()
 }
@@ -49,8 +49,9 @@ function comicRefactor(menu_id) {
     comic[i].style.top=ccoordinates.Y+document.getElementById(menu_id).height+'px'
   }
   var triangle=document.getElementById('tri')
-  //la x varierà in funzione del fumetto appena spostato
-  //la y varierà in funzione della testa del pinguino
+  //la x varia in funzione del fumetto appena spostato
+  triangle.style.marginLeft=ccoordinates.X-200+'px'
+  //la y varia in funzione dell'altezza della testa del pinguino
 }
 
 function iframeRefactor() {
