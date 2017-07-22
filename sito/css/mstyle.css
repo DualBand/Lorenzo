@@ -1,0 +1,53 @@
+@font-face {
+    font-family:"Underwood Champion";
+    src: url("../fonts/uwch.ttf");
+}
+
+body {
+  background-color: #211e1e;
+  font-family:"Underwood Champion", monospace;
+  font-size: 40;
+}
+
+a {
+  color: #ae5046;
+  text-decoration: none;
+}
+
+p {
+  color: white;
+  padding: 2%;
+  text-align: justify;
+}
+
+#sx, #dx, #tri, footer, .penguin {
+  display: none;
+}
+
+#navbar li {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: #333;
+  padding: 2% 5% 2% 5%;
+  margin-top: 2px;
+}
+
+#navbar {
+  padding-left: 0px;
+}
+
+.comic {
+  height: 100%;
+}
+
+#socialbuttons {
+  display: block;
+  margin-left: 2%;
+}
+
+.socialink {
+  display: inline;
+  width: 20%;
+}
