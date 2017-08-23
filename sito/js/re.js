@@ -23,15 +23,15 @@ function curtainResize() {
       elements[i].style.height=curtain_height+'px'
   var winwidth=window.innerWidth
   var winheight=window.innerHeight
-  if((winwidth/winheight)>(7/3) || winwidth/winheight<(5/3)) {     //fare qualcosa di più intelligente
+  /*if((winwidth/winheight)>(7/3) || winwidth/winheight<(5/3)) {     //fare qualcosa di più intelligente
     alert("Piantala di ridimensionare questa finestra, le cose a schermo intero sono bellissime!");
   }
-  else {    //ridimensiona dinamicamente
+  else {  */  //ridimensiona dinamicamente
     var curtain_height=winheight
     var elements=document.getElementsByClassName('resizable')
       for (var i=0; i<elements.length; i++)
         elements[i].style.height=curtain_height+'px'
-  }
+  //}
 }
 
 function penguinRefactor() {
