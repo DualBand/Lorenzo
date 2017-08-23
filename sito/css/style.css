@@ -61,11 +61,11 @@ footer {
   }
 
 #enter {
-    font-size: 30px;
+    font-size: 40px;
     margin: auto;
     position: fixed;
     top: 50%;
-    left: 42%;
+    left: 45%;
     z-index: 3;
 }
 

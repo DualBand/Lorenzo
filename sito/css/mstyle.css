@@ -20,8 +20,18 @@ p {
   text-align: justify;
 }
 
-#sx, #dx, #tri, footer, .penguin {
+#sx, #dx, #tri, #sipario, #enter, footer, .penguin {
   display: none;
+}
+
+.lang {
+  padding: 1px;
+  width: 100%;
+}
+
+#changelang{
+  width:100%;
+  display: inline;
 }
 
 #navbar li {
