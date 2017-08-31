@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">  <!-- aiuto per il browser per capire cosa deve leggere --> 
+<html>  <!-- una pagina web inizia con html e finisce con </html> --> 
+<head>  <!-- inizio testa che finisce sempre con </head> --> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">  <!-- altri aiuti per il browser tipo codifica caratteri --> 
+<title>inserisci nuovo lavoro</title>  <!-- titolo della pagina  --> 
+</head>  <!-- fine testa -->
+<body> <!-- inizio corpo che finisce con </body> -->
+<br><div style="text-align: center;"><h1>INSERISCI UN NUOVO LAVORO</h1></div><br><!-- <br> è un a capo; div è per centrare il testo in mezzo alla pagina; <h1> mi serve per indentificare il titolo di primaria importanza che userò poi nel foglio di stile CSS per dimensione caratteri e altro -->
+
+<form action="ricevi.php" method="post"> <!-- inizio modulo per inviare i dati a una pagina php (ricevi.php) con metodo post (c'e' anche il metodo GET) -->
+<h2>titolo</h2>  <!-- H2 mi serve per dare la formattazione tipo carattere o altro con i fogli di stile css -->
+<textarea cols="39" rows="2" name="titolo">inserisci un titolo</textarea>  <!-- area di testo fatta da 2 righe lunga 39 -->
+<br><br>  <!-- 2 a capi -->
+<h2>descrizione</h2>  <!-- H2 mi serve per dare la formattazione tipo carattere o altro con i fogli di stile css -->
+<textarea cols="50" rows="4" name="descrizione">Inserisci descrizione</textarea>  <!-- area di testo fatta da 4 righe lunga 50 -->
+<br><br><!-- 2 a capi -->
+<input value="invia dati" type="submit">  <!-- pulsante che invia i dati alla pagina ricevi.php -->
+</form>   <!-- fine del modulo -->
+
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,38 @@
+USO DI XAMPP
+
+------Windows
+Una volta installato, (o installazione con setup oppure da szippare il file) per fare partire l'ambiente devi
+lanciare (all'interno della cartella xampp di solito sotto c:\\) il programma XAMPP_START.EXE, per fermarlo
+XAMPP_STOP.EXE, se vuoi lanciare il pannello di controllo XAMPP-CONTROL.EXE.
+
+------Linux
+Digitare sul terminale i comandi sudo /opt/lampp/lampp <start, stop oppure restart> per controllare xampp. Per il pannello di controllo, lanciare xampp normalmente.
+
+Una volta lanciato l'ambiente, devi mettere (su Linux, come root) la cartella contenente i file relativi al db dentro la cartella "htdocs" che si trova
+dentro la cartella xampp (NB: su Linux, cambiare oppurtunamente i permessi).
+
+
+
+USO DEL MODULO DI GESTIONE (phpmyadmin)
+
+Poi apri un browser (firefox crhome ecc.) e, per andare al modulo di gestione (per Lorenzo)
+digita http://localhost/lorenzodb/index.html
+per andare all'amministrazione del database digita http://localhost/phpmyadmin
+
+Creare il database con la tabella:
+
+1. ---- con l'utility phpmyadmin, creo un nuovo database dal nome "lorenzodb"
+2. ---- dal menu' in alto a destra importa ----- e scegli il file lorenzodb.sql che ti crea la tabella con dentro i dati
+
+ISTRUZIONI AL FINE DI CREARE NOME UTENTE E PASSWORD PER IL DATABASE lorenzodb
+
+1. CLICCARE SU "ACCOUNT UTENTI" ---- > APPARIRA' UN TABELLA CON L'ELENCO DI TUTTI GLI UTENTI VARI DEI VARI DATABASE
+2. CLICARE SU "AGGIUNGI ACCOUNT UTENTE" ---- > APPARIRA' UNA MASCHERA PER INSERIRE I DATI
+3. IN NOME UTENTE INSERIRE "lorenzodb"
+4. IN NOME HOST INSERIRE "localhost"
+5. IN PASSWORD "bravaragazza" e ripetere sotto per conferma
+6. DOVE C'è PRIVILEGI GLOBALI CLICCA "SELEZIONA TUTTO"
+7. CLICCA SU ESEGUI E IL DATABASE CREATO PRIMA DOVREBBE ESSERE ACCESSIBILE CON LE CREDENZIALI INSERITE NEGLI SCRIPTS
+
+
+
