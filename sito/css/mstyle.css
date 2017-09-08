@@ -24,9 +24,11 @@ p {
   display: none;
 }
 
-.lang {
+.lang { 
   padding: 1px;
-  width: 100%;
+  width: 49%;
+  display: inline;
+  float:left;
 }
 
 #changelang{
