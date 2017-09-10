@@ -25,10 +25,11 @@ p {
 }
 
 .lang { 
-  padding: 1px;
-  width: 49%;
+  width: 5%;
+  padding: 2px;
   display: inline;
-  float:left;
+  background-color: transparent;
+  border: none;
 }
 
 #changelang{
