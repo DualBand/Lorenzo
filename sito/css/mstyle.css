@@ -24,8 +24,8 @@ p {
   display: none;
 }
 
-.lang { 
-  width: 5%;
+.lang {
+   width: 100%;
   padding: 2px;
   display: inline;
   background-color: transparent;
