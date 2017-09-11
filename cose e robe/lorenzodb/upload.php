@@ -1,4 +1,4 @@
-<?php session_start(); ?> <!-- tengo la sessione per trascinarmi i valori immagazzinati prima --> 
+<?php session_start(); ?> <!-- tengo la sessione per trascinarmi i valori immagazzinati prima -->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html template="true">
@@ -25,14 +25,13 @@ if (file_exists($target_file)) {
     $uploadOk = 0; /// non va bene
 }
 // Check se il file e' maggiore di 500000, per evitare immagini troppo grosse, valore da cambiare se lo si desidera
-if ($_FILES["fileToUpload"]["size"] > 500000) {
+if ($_FILES["fileToUpload"]["size"] > 10000000) {
     echo "spiacente il tuo file e' troppo grosso.";
     $uploadOk = 0; /// non va bene
 }
 
 // Permetti solo i file di tipo immagine non altri tipi di file
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
+if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;  /// non va bene
 }
@@ -40,13 +39,13 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 
 // Check se $uploadOk è a 0, cioè qualcosa non funziona oppure è a 1 cioè tutto funziona
 if ($uploadOk == 0) {
-    echo "spiacente qualcosa non va bene";
+    echo "Spiacente, qualcosa non ha funzionato.";
 // se tutto è a posto provo ad uplodare il file selezionato
 } else { // solo se tutto è a posto visualizzo il resto altrimenti si ferma qui'
 
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {  /// invio del file
       echo "IL file ". basename( $_FILES["fileToUpload"]["name"]). "<br> e' stato caricato.<br>"; // il nome del file a monitor è stato caricato
-		
+
 $nome_file_scelto=basename( $_FILES["fileToUpload"]["name"]); //immagazzino il nome del file completo in una variabile di nome $nome_file_scelto
 $nuovo_titolo=$_SESSION["variabile1"]; //immagazzino il titolo in una variabile di nome $nuovo_titolo, il dato lo avevo messo dentro la sessione
 $nuova_descrizione=$_SESSION["variabile2"]; //immagazzino la descrizione in una variabile di nome $nuova_descrizione, il dato lo avevo messo dentro la sessione

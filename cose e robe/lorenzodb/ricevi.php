@@ -16,10 +16,12 @@ session_start(); //inizio di una sessione, mi serve per tenere in memoria alcune
 // normalmente, per ricevere un dato da un form, userei per es. $titolo=$_POST["titolo"];
 
 $_SESSION["variabile1"] = $_POST["titolo"];// usando le sessioni, immagazzino il titolo che mi arriva dal form precedente in variabile1
+$_SESSION["variabile3"] = $_POST["progetto"];
 $_SESSION["variabile2"] = $_POST["descrizione"];// come sopra immagazzino in variabile2 la descrizione che ho inviato
 ?>
 <h3>Titolo:</h3> <br><?php echo $_POST["titolo"]; ?>   <!-- echo vuol dire manda a monitor il contenuto di quello che ho mandato con il form in questo caso il titolo-->
 
+<h3>Progetto:</h3> <?php echo $_POST["progetto"]; ?>
 <h3>Descrizione:</h3> <?php echo $_POST["descrizione"]; ?> <!-- echo vuol dire manda a monitor il contenuto di quello che ho mandato con il form in questo caso la descrizione-->
 <br>
 <br>
