@@ -1,22 +1,18 @@
 <?php
-$titolo=$_POST["titolo"]; // ricevo i dati dal form della pagina upload.php
+$titolo=$_POST["titolo"]; //ricevo i dati dal form della pagina upload.php
 $descrizione=$_POST["descrizione"];
 $id=$_POST["numero_prog"];
 $immagine=$_POST["immagine"];
-$progetto=$_POST["progetto"]
+$progetto=$_POST["progetto"];
 
-include"connessione.php"; //includo come prima i dati della connessione al db
+include"connessione.php";
 
+echo"ricevo: $id -- $immagine -- $titolo -- $descrizione -- $progetto<br>";
 
-echo"ricevo: $id -- $immagine -- $titolo -- $descrizione -- $progetto<br>"; // mando a monitor quello che ricevo per sicurezza
-
-// inserisco nella tabella lavori, formata da 4 campi i valori corrispondenti ---> vedi poi come è fatta la tabella (file sql allegato)
 $sql = "INSERT INTO lavori (id, titolo, progetto, descrizione, immagine) VALUES (\"$id\", \"$titolo\", \"$progetto\", \"$descrizione\", \"$immagine\")";
-mysqli_query($conn, $sql);// eseguo la query
+mysqli_query($conn, $sql); //esecuzione della query sovrastante
 
-echo"<br><br>ho inserito i dati, l'elenco del db e' il seguente:<br>"; // conferma inserimento
-
-/// seleziono tutti i record della tabella per fare vedere il nuovo inserimento alla fine
+echo"<br><br>ho inserito i dati, l'elenco del db e' il seguente:<br>";
 
 $sql = "SELECT id, titolo, progetto, descrizione, immagine FROM $tabella";
 $result = mysqli_query($conn, $sql);
