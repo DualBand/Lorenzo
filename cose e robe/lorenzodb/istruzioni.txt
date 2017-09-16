@@ -15,8 +15,10 @@ dentro la cartella xampp (NB: su Linux, cambiare oppurtunamente i permessi).
 USO DEL MODULO DI GESTIONE (phpmyadmin)
 
 Apri un browser e, per andare al modulo di gestione (per Lorenzo)
-digita http://localhost/lorenzodb/index.html
-per andare all'amministrazione del database digita http://localhost/phpmyadmin
+digita 
+http://localhost/lorenzodb/index.html
+per andare all'amministrazione del database digita 
+http://localhost/phpmyadmin
 
 Creare il database con la tabella:
 

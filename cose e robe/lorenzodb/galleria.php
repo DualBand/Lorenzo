@@ -12,17 +12,17 @@ Elenco lavori <br><br>
 <?php
 include"connessione.php";
 
-$sql = "SELECT id, titolo, descrizione, immagine FROM $tabella";
+$sql = "SELECT id, titolo, descrizione, media FROM $tabella";
 $result = mysqli_query($conn, $sql); //lancio query
 
-if (mysqli_num_rows($result) > 0) { //costruzione tabella
+if (mysqli_num_rows($result) > 0) { //costruzione tabella (da modificare per visualizzazione video)
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<tr><td>" . $row["titolo"]. "</td></tr><tr><td>" . $row["descrizione"]. "</td></tr><tr><td><img alt=\"Immagine\" src=\"images/" . $row["immagine"]."\"></td></tr><tr><td><hr></td></tr><tr><td><hr></td></tr><br>";
+        echo "<tr><td>" . $row["titolo"]. "</td></tr><tr><td>" . $row["descrizione"]. "</td></tr><tr><td><img alt=\"media\" src=\"media/" . $row["media"]."\"></td></tr><tr><td><hr></td></tr><tr><td><hr></td></tr><br>";
     }
 } else {
    //è stato bello...
 }
-mysqli_close($conn); 
+mysqli_close($conn);
 ?>
 
 

@@ -10,12 +10,12 @@ echo"<br><br>Elimina record:<br>
 	   <input value=\"elimina record con numero\" type=\"submit\"></form>
 ";
 
-$sql = "SELECT id, titolo, descrizione, immagine FROM $tabella";
+$sql = "SELECT id, titolo, descrizione, media FROM $tabella";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
-        echo "id: " . $row["id"]. " - titolo: " . $row["titolo"]. " - descrizione " . $row["descrizione"]. " - immagine " . $row["immagine"]."<br>";
+        echo "id: " . $row["id"]. " - titolo: " . $row["titolo"]. " - descrizione " . $row["descrizione"]. " - media " . $row["media"]."<br>";
     }
 } else {
     echo "0 results";

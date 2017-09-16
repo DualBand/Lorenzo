@@ -27,9 +27,9 @@ $_SESSION["variabile2"] = $_POST["descrizione"];// come sopra immagazzino in var
 <br>
 
 <form action="upload.php" method="post" enctype="multipart/form-data"><!-- modulo per caricare immagini, che invia i dati ad una pagina php upload.php -->
-    <h4>Seleziona immagine da caricare:</h4>
+    <h4>Seleziona media da caricare:</h4>
     <input name="fileToUpload" id="fileToUpload" type="file">
-    <input value="Carica immagine" name="submit" type="submit">
+    <input value="Carica media" name="submit" type="submit">
 </form>
 
 </body></html>

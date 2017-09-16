@@ -9,7 +9,7 @@
 <body>
 <br>
 
-<?php $target_dir = "images/"; /// cartella che contiene le immagini
+<?php $target_dir = "media/"; /// cartella che contiene le immagini
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]); /// indirizzo completo su dove copiare
 $uploadOk = 1; /// variabile di controllo mi serve per capire se tutto e' andato ok
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -30,9 +30,8 @@ if ($_FILES["fileToUpload"]["size"] > 10000000) {
     $uploadOk = 0; /// non va bene
 }
 
-// Permetti solo i file di tipo immagine non altri tipi di file
-if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "mp4" && $imageFileType != "avi" && $imageFileType != "MOV") { //controllo formato file
+    echo "Formato non supportato. Se il tuo file è un immagine o un video, contatta i creatori del sito.";
     $uploadOk = 0;  /// non va bene
 }
 
@@ -66,7 +65,7 @@ $nuovo_id=$id+1; // il prossimo lavoro che inseriro' avra' l'id +1
 
 
 //sotto chiedo la conferma se vuoi procedere a inserire i dati nel database
-echo"<br><br>devo inserire in db?<br><br> id=$nuovo_id --- <br>titolo=$nuovo_titolo ---<br> descrizione=$nuova_descrizione ---<br> immagine=$nome_file_scelto<br><br>????";
+echo"<br><br>devo inserire in db?<br><br> id=$nuovo_id --- <br>titolo=$nuovo_titolo ---<br> descrizione=$nuova_descrizione ---<br> media=$nome_file_scelto<br><br>????";
 // di sotto c'è una cosa un po' anomala, ossia con il php costruisco il form per inviare i dati al database.
 // la differenza rispetto a scrivere il form con l'html, cosi' come nella pagina inserisci_lavoro.html è che dove ci sono gli apici " devo mettergli davanti al barra rovesciata \
 // uso questa tecnica (costruire l'html con il php) perchè solo se tutto è ok te lo fa vedere.
@@ -78,8 +77,8 @@ titolo<br>
   <textarea cols=\"50\" rows=\"4\" name=\"descrizione\">$nuova_descrizione</textarea><br>
   <br>numero progressivo<br>
     <textarea cols=\"3\" rows=\"1\" name=\"numero_prog\">$nuovo_id</textarea><br>
-  <br>nome immagine<br>
-  <textarea cols=\"39\" rows=\"1\" name=\"immagine\">$nome_file_scelto</textarea><br>
+  <br>nome media<br>
+  <textarea cols=\"39\" rows=\"1\" name=\"media\">$nome_file_scelto</textarea><br>
   <input value=\"invia dati\" type=\"submit\"></form>
 ";
 
