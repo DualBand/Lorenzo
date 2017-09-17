@@ -12,8 +12,6 @@ session_start(); //inizio di una sessione, mi serve per tenere in memoria alcune
 
 <br>
 <?php
-// non ti incasinare, la sessione mi serve solo perchè ho bisogno di tenere in memoria i dati da mandare in una altra pagina.
-// normalmente, per ricevere un dato da un form, userei per es. $titolo=$_POST["titolo"];
 
 $_SESSION["variabile1"] = $_POST["titolo"];// usando le sessioni, immagazzino il titolo che mi arriva dal form precedente in variabile1
 $_SESSION["variabile3"] = $_POST["progetto"];

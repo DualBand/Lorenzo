@@ -10,9 +10,10 @@
 <br>
 
 <?php $target_dir = "media/"; /// cartella che contiene le immagini
+define('MB', 1048576);
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]); /// indirizzo completo su dove copiare
 $uploadOk = 1; /// variabile di controllo mi serve per capire se tutto e' andato ok
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+$fileType = pathinfo($target_file,PATHINFO_EXTENSION);
 $nuovo_id=0; // inizializzo questa variabile
 $nome_file_scelto=""; // inizializzo questa variabile
 $id=0;// inizializzo questa variabile
@@ -24,13 +25,12 @@ if (file_exists($target_file)) {
     echo "spiacente, il file esiste di gia'";
     $uploadOk = 0; /// non va bene
 }
-// Check se il file e' maggiore di 500000, per evitare immagini troppo grosse, valore da cambiare se lo si desidera
-if ($_FILES["fileToUpload"]["size"] > 10000000) {
-    echo "spiacente il tuo file e' troppo grosso.";
+if ($_FILES["fileToUpload"]["size"] > 50*MB) {
+    echo "Spiacente, il tuo file e' troppo grosso.";
     $uploadOk = 0; /// non va bene
 }
 
-if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "mp4" && $imageFileType != "avi" && $imageFileType != "MOV") { //controllo formato file
+if($fileType != "jpg" && $fileType != "JPG" && $fileType != "png" && $fileType != "jpeg" && $fileType != "gif" && $fileType != "mp4" && $fileType != "avi" && $fileType != "MOV") { //controllo formato file
     echo "Formato non supportato. Se il tuo file è un immagine o un video, contatta i creatori del sito.";
     $uploadOk = 0;  /// non va bene
 }

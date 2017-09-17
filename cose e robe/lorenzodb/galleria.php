@@ -4,7 +4,6 @@
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
   <title>galleria lavori</title>
 
-
 </head><body>
 <br>
 Elenco lavori <br><br>
@@ -12,7 +11,7 @@ Elenco lavori <br><br>
 <?php
 include"connessione.php";
 
-$sql = "SELECT id, titolo, descrizione, media FROM $tabella";
+$sql = "SELECT" +$variabileid +", titolo, descrizione, media FROM $tabella";
 $result = mysqli_query($conn, $sql); //lancio query
 
 if (mysqli_num_rows($result) > 0) { //costruzione tabella (da modificare per visualizzazione video)
