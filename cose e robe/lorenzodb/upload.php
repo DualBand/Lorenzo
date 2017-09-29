@@ -14,9 +14,10 @@ define('MB', 1048576);
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]); /// indirizzo completo su dove copiare
 $uploadOk = 1; /// variabile di controllo mi serve per capire se tutto e' andato ok
 $fileType = pathinfo($target_file,PATHINFO_EXTENSION);
-$nuovo_id=0; // inizializzo questa variabile
-$nome_file_scelto=""; // inizializzo questa variabile
-$id=0;// inizializzo questa variabile
+$nuovo_id=0;
+$nome_file_scelto="";
+$nuovo_progetto="";
+$id=0;
 
 
 
@@ -47,8 +48,8 @@ if ($uploadOk == 0) {
 
 $nome_file_scelto=basename( $_FILES["fileToUpload"]["name"]); //immagazzino il nome del file completo in una variabile di nome $nome_file_scelto
 $nuovo_titolo=$_SESSION["variabile1"]; //immagazzino il titolo in una variabile di nome $nuovo_titolo, il dato lo avevo messo dentro la sessione
-$nuova_descrizione=$_SESSION["variabile2"]; //immagazzino la descrizione in una variabile di nome $nuova_descrizione, il dato lo avevo messo dentro la sessione
-
+$nuova_descrizione=$_SESSION["variabile2"];
+$nuovo_progetto=$_SESSION["variabile3"];
 
 
 include"connessione.php"; //al fine di connettermi al database mysql,ho inserito in una pagina esterna dal nome "connessione.php"  i dati nome utente e passw, oltre alla connessione del db mysql
@@ -79,7 +80,10 @@ titolo<br>
     <textarea cols=\"3\" rows=\"1\" name=\"numero_prog\">$nuovo_id</textarea><br>
   <br>nome media<br>
   <textarea cols=\"39\" rows=\"1\" name=\"media\">$nome_file_scelto</textarea><br>
-  <input value=\"invia dati\" type=\"submit\"></form>
+  <br>progetto<br>
+  <textarea cols=\"39\" rows=\"1\" name=\"progetto\">$nuovo_progetto</textarea><br>
+  <input value=\"invia dati\" type=\"submit\">
+</form>
 ";
 
 
