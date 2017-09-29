@@ -61,7 +61,11 @@ footer {
   }
 
 #enter {
+    cursor:pointer;
     font-size: 40px;
+    color: #e0c6a3;
+    background-color: transparent;
+    border: none;
     margin: auto;
     position: fixed;
     top: 50%;
@@ -70,10 +74,15 @@ footer {
 }
 
 .lang {
-    display: block;
+    margin-top: 30%;
     padding: 10px;
     background-color: transparent;
     border: none;
+
+#changelang {
+    display: block;
+    
+}
 }
 
 
