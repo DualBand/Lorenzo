@@ -23,7 +23,7 @@ $id=0;
 
 // Check se il file e' gia' esistente
 if (file_exists($target_file)) {
-    echo "spiacente, il file esiste di gia'";
+    echo "Spiacente, c'è già un file con questo nome nel database.";
     $uploadOk = 0; /// non va bene
 }
 if ($_FILES["fileToUpload"]["size"] > 50*MB) {
@@ -31,7 +31,7 @@ if ($_FILES["fileToUpload"]["size"] > 50*MB) {
     $uploadOk = 0; /// non va bene
 }
 
-if($fileType != "jpg" && $fileType != "JPG" && $fileType != "png" && $fileType != "jpeg" && $fileType != "gif" && $fileType != "mp4" && $fileType != "avi" && $fileType != "MOV") { //controllo formato file
+if($fileType != "jpg" && $fileType != "JPG" && $fileType != "png" && $fileType != "jpeg" && $fileType != "gif" && $fileType != "mp4" && $fileType != "avi" && $fileType != "webm") { //controllo formato file
     echo "Formato non supportato. Se il tuo file è un immagine o un video, contatta i creatori del sito.";
     $uploadOk = 0;  /// non va bene
 }

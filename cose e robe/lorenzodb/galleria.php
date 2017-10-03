@@ -5,7 +5,7 @@
       <link rel='shortcut icon' type='image/x-icon' href='../img/icon.ico' />
       <meta charset="utf-8">
       <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-      <link rel='stylesheet' type='text/css' media='screen and (min-device-width: 800px)' href='../css/style.css'>
+      <link rel='stylesheet' type='text/css' media='screen and (min-device-width: 800px)' href='../sito/css/style.css'>
       <link rel='stylesheet' type='text/css' media='screen and (max-device-width: 799px)' href='../css/mstyle.css'>
       <script type='text/javascript' src='../js/re.js'></script>
    </head>
@@ -27,6 +27,6 @@
          }
          mysqli_close($conn);
          ?>
-      </table><table> <!-- fine tabella html -->
+      </table><table>
       </body>
 </html>
