@@ -11,13 +11,12 @@
    </head>
 
    <body>
-      <table>
          <?php
             include "connessione.php";
             $par=$_GET['project'];
             $sql="SELECT titolo, descrizione, media FROM ".$tabella." WHERE progetto=\"".$par."\"";
             $result = mysqli_query($conn, $sql); //lancio query
-            if (mysqli_num_rows($result) > 0) { //costruzione tabella (da modificare per visualizzazione video)
+            if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {
                $fileType = pathinfo($row["media"],PATHINFO_EXTENSION);
                if($fileType == "mp4" || $fileType == "avi" || $fileType == "webm") {
@@ -30,6 +29,5 @@
          }
          mysqli_close($conn);
          ?>
-      </table><table>
       </body>
 </html>

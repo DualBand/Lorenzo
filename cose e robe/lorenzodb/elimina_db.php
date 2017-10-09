@@ -1,6 +1,5 @@
 <?php
-// la pagina php  che effettivamente elimina il record è la elimina2_db.php
-
+//elimina effettivamente il record
 include"connessione.php";
 echo"<br><br>Elimina record:<br>
 <form action=\"elimina2_db.php\" method=\"post\" target=\"_blank\">
