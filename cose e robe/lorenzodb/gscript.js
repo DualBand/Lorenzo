@@ -1,3 +1,16 @@
+//ridimensiona le slides
+window.onload=function() { slidesResize() }
+window.onresize=function() { slidesResize() }
+
+function slidesResize() {
+   var windowHeight=window.innerHeight
+   alert(windowHeight)
+   var elements=document.getElementsByClassName('mySlides')
+   for (var i=0; i<elements.length; i++) {
+      elements[i].style.maxHeight=windowHeight+'px'
+   }
+}
+
 var slideIndex = 1;
 showDivs(slideIndex);
 

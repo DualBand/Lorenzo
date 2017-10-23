@@ -10,10 +10,18 @@
    width: 13px;
    padding: 0;
 }
+
 .w3-content, .w3-display-container {
    max-width: 800px;
 }
 
 .mySlides {
-   width:100%;
+   max-width: 100%;
+}
+
+body {   /*temporaneo: proviene da style.css*/
+  overflow: hidden;
+  background-color: #211e1e;
+  font-family:"Underwood Champion", monospace;
+  position: relative;
 }
