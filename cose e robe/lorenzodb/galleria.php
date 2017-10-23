@@ -5,12 +5,14 @@
       <link rel='shortcut icon' type='image/x-icon' href='../img/icon.ico' />
       <meta charset="utf-8">
       <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-      <!--<link rel='stylesheet' type='text/css' media='screen and (min-device-width: 800px)' href='../sito/css/style.css'>-->
-      <link rel='stylesheet' type='text/css' media='screen and (max-device-width: 799px)' href='../css/mstyle.css'>
-      <script type='text/javascript' src='../js/re.js'></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" type='text/css' href='galleria.css'> <!--da spostare-->
+      <script type='text/javascript' src='gscript.js'></script>
    </head>
 
    <body>
+      <div class="w3-content w3-display-container">
          <?php
             include "connessione.php";
             $par=$_GET['project'];
@@ -20,14 +22,20 @@
             while($row = mysqli_fetch_assoc($result)) {
                $fileType = pathinfo($row["media"],PATHINFO_EXTENSION);
                if($fileType == "mp4" || $fileType == "avi" || $fileType == "webm") {
-                  echo "<video controls><source src=\"media/" . $row["media"]."\" type=\"video/" . $fileType ."\">Your browser does not support the video tag.</video>";
+                  echo "<video controls class=\"mySlides\"><source src=\"media/" . $row["media"]."\" type=\"video/" . $fileType ."\">Your browser does not support the video tag.</video>";
                }
-               else echo "<img alt=\"media\" src=\"media/" . $row["media"]."\">";
+               else echo "<img class=\"mySlides\" alt=\"media\" src=\"media/" . $row["media"]."\">";
             }
          } else {
             //è stato bello...
          }
          mysqli_close($conn);
          ?>
-      </body>
+         <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+         <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+   </body>
 </html>
