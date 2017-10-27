@@ -19,23 +19,23 @@
             $sql="SELECT titolo, descrizione, media FROM ".$tabella." WHERE progetto=\"".$par."\"";
             $result = mysqli_query($conn, $sql); //lancio query
             if (mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
-               $fileType = pathinfo($row["media"],PATHINFO_EXTENSION);
-               if($fileType == "mp4" || $fileType == "avi" || $fileType == "webm") {
-                  echo "<video controls class=\"mySlides\"><source src=\"media/" . $row["media"]."\" type=\"video/" . $fileType ."\">Your browser does not support the video tag.</video>";
+               $mediaCounter=0;
+               while($row = mysqli_fetch_assoc($result)) {
+                  $fileType = pathinfo($row["media"],PATHINFO_EXTENSION);
+                  if($fileType == "mp4" || $fileType == "avi" || $fileType == "webm") {
+                     echo "<video controls class=\"mySlides\"><source src=\"media/" . $row["media"]."\" type=\"video/" . $fileType ."\">Your browser does not support the video tag.</video>";
+                  }
+                  else echo "<img class=\"mySlides\" alt=\"media\" src=\"media/" . $row["media"]."\">";
+                  $mediaCounter++;
                }
-               else echo "<img class=\"mySlides\" alt=\"media\" src=\"media/" . $row["media"]."\">";
-            }
          } else {
             //è stato bello...
          }
          mysqli_close($conn);
+         for($i=1; $i<=$mediaCounter; $i++) echo "<span class=\"w3-badge demo w3-border w3-transparent w3-hover-white\" onclick=\"currentDiv(".$i.")\"></span>";
          ?>
          <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
          <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
       </div>
    </body>
 </html>
