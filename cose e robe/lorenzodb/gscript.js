@@ -6,7 +6,7 @@ function slidesResize() {
    var windowHeight=window.innerHeight
    var elements=document.getElementsByClassName('mySlides')
    for (var i=0; i<elements.length; i++) {
-      elements[i].style.maxHeight=windowHeight-5+'px'
+      elements[i].style.maxHeight=windowHeight-40+'px'
    }
 }
 

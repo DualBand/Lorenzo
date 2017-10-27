@@ -1,5 +1,6 @@
 .mySlides {
    display: none;
+   margin: auto;
 }
 
 .w3-left, .w3-right, .w3-badge {
