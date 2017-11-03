@@ -4,9 +4,11 @@ window.onresize=function() { slidesResize() }
 
 function slidesResize() {
    var windowHeight=window.innerHeight
+   var wh=windowHeight-40
    var elements=document.getElementsByClassName('mySlides')
    for (var i=0; i<elements.length; i++) {
-      elements[i].style.maxHeight=windowHeight-40+'px'
+      elements[i].style.maxHeight=wh+'px'   //ridimensiona le immagini
+      elements[i].setAttribute("height", wh+'px');//ridimensiona i video
    }
 }
 
