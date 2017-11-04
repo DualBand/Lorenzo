@@ -26,3 +26,13 @@ body {   /*temporaneo: proviene da style.css*/
   font-family:"Underwood Champion", monospace;
   position: relative;
 }
+
+.overlay {
+   border-radius: 0%;
+   left: 65%;
+}
+
+.ltext {
+   font-size: 18px;
+   top: 12%;
+}
