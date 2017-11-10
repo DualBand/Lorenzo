@@ -24,9 +24,10 @@ function currentDiv(n) {
 }
 
 function showDivs(n) {
+   //far sparire tutti i div aggiuntivi e il testo contenuto <--------------------------------------------------------
   var i;
   var x = document.getElementsByClassName("mySlides");   //contenuti
-  var dots = document.getElementsByClassName("demo");    //pallucchi
+  var dots = document.getElementsByClassName("demo");    //pallucchi e orpelli vari
   if (n > x.length) {slideIndex = 1}   //troppo a destra
   if (n < 1) {slideIndex = x.length}   //troppo a sinistra
   for (i = 0; i < x.length; i++) {     //nasconde tutti i contenuti

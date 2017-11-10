@@ -7,6 +7,7 @@
       <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" type='text/css' href='overlay.css'> <!--ridondante-->
       <link rel="stylesheet" type='text/css' href='gallery.css'> <!--da spostare-->
       <script type='text/javascript' src='gscript.js'></script>
    </head>
@@ -22,12 +23,16 @@
                $mediaCounter=0;
                while($row = mysqli_fetch_assoc($result)) {
                   $fileType = pathinfo($row["media"],PATHINFO_EXTENSION);
+                  echo "<div class=\"container\">";
                   if($fileType == "mp4" || $fileType == "avi" || $fileType == "webm") {
-                     echo "<video controls class=\"mySlides\"><source src=\"media/" . $row["media"]."\" type=\"video/" . $fileType ."\">Your browser does not support the video tag.</video>";
+                     echo "<video controls class=\"mySlides pb\"><source src=\"media/" . $row["media"]."\" type=\"video/" . $fileType ."\">Your browser does not support the video tag.</video>";
                   }
-                  else echo "<img class=\"mySlides\" alt=\"media\" src=\"media/" . $row["media"]."\">";
+                  else
+                     echo "<img class=\"mySlides pb\" alt=\"media\" src=\"media/" . $row["media"]."\">";
                   $mediaCounter++;
+                  echo "<div class=\"overlay\"><div class=\"ltext\"><b>" . $row["titolo"] . "</b><br>" . $row["descrizione"] . "</div></div>";
                }
+               echo "</div>";
          } else {
             //è stato bello...
          }
