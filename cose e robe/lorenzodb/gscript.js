@@ -24,6 +24,7 @@ function currentDiv(n) {
 }
 
 function showDivs(n) {
+   //far sparire tutti i div aggiuntivi e il testo contenuto <--------------------------------------------------------
   var i;
   var x = document.getElementsByClassName("mySlides");
   var y = document.getElementsByClassName("ltext");
