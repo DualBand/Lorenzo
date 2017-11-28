@@ -1,8 +1,6 @@
 .mySlides {
    display: none;
    margin: auto;
-   width: auto;
-   height: 100%;
 }
 
 .w3-left, .w3-right, .w3-badge {
@@ -18,19 +16,13 @@
    max-width: 800px;
 }
 
+.mySlides {
+   max-width: 100%;
+}
+
 body {   /*temporaneo: proviene da style.css*/
   overflow: hidden;
   background-color: #211e1e;
   font-family:"Underwood Champion", monospace;
   position: relative;
-}
-
-.overlay {
-   border-radius: 0%;
-   left: 65%;
-}
-
-.ltext {
-   font-size: 18px;
-   top: 12%;
 }
