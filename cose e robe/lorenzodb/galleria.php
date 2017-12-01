@@ -12,7 +12,6 @@
    </head>
 
    <body>
-      <div class="w3-content w3-display-container">
          <?php
             include "connessione.php";
             $par=$_GET['project'];
@@ -27,6 +26,7 @@
                   }
                   else echo "<img class=\"mySlides\" alt=\"media\" src=\"media/" . $row["media"]."\">";
                   $mediaCounter++;
+                  echo "<div class=\"text\"><b>" . $row["titolo"] . " <span class=\"push\" onclick=\"chDescVisibility()\"> ▼ </span> </b><br>" . "<div class=\"desc\">" . $row["descrizione"] . "</div> </div>";
                }
          } else {
             //è stato bello...
@@ -38,6 +38,5 @@
             for($i=1; $i<=$mediaCounter; $i++) echo "<span class=\"w3-badge demo w3-border w3-transparent w3-hover-white\" onclick=\"currentDiv(".$i.")\"></span>";
          ?>
          </div>
-      </div>
    </body>
 </html>
