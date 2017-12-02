@@ -43,7 +43,6 @@ function showDivs(n) {
 }
 
 document.onkeydown = function(e) {  //gestione frecce tastiera
-    e = e || window.event
     if (e.keyCode == 37) {
       slideIndex--
       showDivs(slideIndex)   //scorre a sinistra
@@ -56,10 +55,18 @@ document.onkeydown = function(e) {  //gestione frecce tastiera
     }
 }
 
-function chDescVisibility() {
-   var descrs=document.getElementsByClassName("desc")
-   for (i = 0; i < descrs.length; i++) {
-      if (descrs[i].style.display=="none") descrs[i].style.display="block"
-      else (descrs[i].style.display=="none")
+function appari() {
+   var textdivs=document.getElementsByClassName('text')
+   for(i=0; i<textdivs.length; i++) {
+      textdivs[i].style.opacity='1'
+      setTimeout(function() {
+         scompari()
+      }, 5000);
    }
+}
+
+function scompari() {
+   var textdivs=document.getElementsByClassName('text')
+   for(i=0; i<textdivs.length; i++)
+      textdivs[i].style.opacity='0'
 }

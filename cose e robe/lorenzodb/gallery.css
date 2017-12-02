@@ -1,6 +1,7 @@
 .mySlides {
    display: none;
    margin: auto;
+   /*height: auto;   //da mettere sul css mobile*/
 }
 
 .w3-left, .w3-right, .w3-badge {
@@ -32,7 +33,13 @@ body {   /*temporaneo: proviene da style.css*/
    width: 100%;
    position: absolute;
    top: 0px;
-   text-shadow: 1px 1px 10px #000000;
+   background-color: rgba(0,0,0,0.8);
+   padding: 0.5%;
+}
+
+.animated {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
 }
 
 .push {

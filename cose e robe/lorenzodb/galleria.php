@@ -7,6 +7,7 @@
       <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> <!--temporaneo: è animate.css-->
       <link rel="stylesheet" type='text/css' href='gallery.css'> <!--da spostare-->
       <script type='text/javascript' src='gscript.js'></script>
    </head>
@@ -24,9 +25,9 @@
                   if($fileType == "mp4" || $fileType == "avi" || $fileType == "webm") {
                      echo "<video controls class=\"mySlides\"><source src=\"media/" . $row["media"]."\" type=\"video/" . $fileType ."\">Your browser does not support the video tag.</video>";
                   }
-                  else echo "<img class=\"mySlides\" alt=\"media\" src=\"media/" . $row["media"]."\">";
+                  else echo "<img class=\"mySlides\" onmouseover=\"appari()\" onmouseout=\"scompari()\" alt=\"media\" src=\"media/" . $row["media"]."\">";
                   $mediaCounter++;
-                  echo "<div class=\"text\"><b>" . $row["titolo"] . " <span class=\"push\" onclick=\"chDescVisibility()\"> ▼ </span> </b><br>" . "<div class=\"desc\">" . $row["descrizione"] . "</div> </div>";
+                  echo "<div class=\"text\"> <b>" . $row["titolo"] . "</b><br>" . $row["descrizione"] . "</div>";
                }
          } else {
             //è stato bello...
