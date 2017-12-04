@@ -39,7 +39,7 @@ if ($uploadOk == 0) {
 
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
       echo "IL file ". basename( $_FILES["fileToUpload"]["name"]). "<br> e' stato caricato.<br>";
-$nome_file_scelto=basename( $_FILES["fileToUpload"]["name"]); variabile di nome $nome_file_scelto
+$nome_file_scelto=basename( $_FILES["fileToUpload"]["name"]);
 $nuovo_titolo=$_SESSION["variabile1"];
 $nuova_descrizione=$_SESSION["variabile2"];
 $nuovo_progetto=$_SESSION["variabile3"];
